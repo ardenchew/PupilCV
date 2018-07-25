@@ -8,26 +8,26 @@ Created on Mon Jul 23 16:44:22 2018
 import cv2
 import numpy as np
 
-def get_video():
-    cap = cv2.VideoCapture(0)
+def get_video(filename):
+    cap = cv2.VideoCapture(filename)
     return cap
 
 def get_cascade(filename):
     cascade = cv2.CascadeClassifier(filename)
     return cascade
 
-def main(cascade_file):
-    cap = get_video()
+def main(video_file, cascade_file):
+    cap = get_video(video_file)
     cascade = get_cascade(cascade_file)
     
-    while True:
+    while (cap.isOpened()):
         ret, img = cap.read()
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         eyes = cascade.detectMultiScale(gray)
         
         for (x,y,w,h) in eyes:
             cv2.rectangle(img, (x,y), (x+w, y+h), (255,0,0), 2)
-            
+        
         cv2.imshow('img',img)
         k = cv2.waitKey(30) & 0xFF
         if k == 27:
@@ -37,4 +37,4 @@ def main(cascade_file):
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    main('../haarcascade/cascades/haarcascade_eye.xml')
+    main('../videos/eyes/sample_1.mp4', '../haarcascade/cascades/haarcascade_eye.xml')
