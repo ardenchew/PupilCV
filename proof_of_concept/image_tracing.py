@@ -28,7 +28,7 @@ def main(image_file, cascade_file):
 
     cv2.imshow('img',img)
     
-    k = cv2.waitKey(0)
+    cv2.waitKey(0)
 
 if __name__ == "__main__":
     main('../images/eyes/sample_1.jpg', '../haarcascade/cascades/haarcascade_eye.xml')

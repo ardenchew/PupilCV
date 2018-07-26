@@ -37,4 +37,5 @@ def main(video_file, cascade_file):
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    main('../videos/eyes/sample_1.mp4', '../haarcascade/cascades/haarcascade_eye.xml')
+    #main('../videos/eyes/sample_1.mp4', '../haarcascade/cascades/haarcascade_eye.xml')
+    main(0, '../haarcascade/cascades/haarcascade_eye.xml')
