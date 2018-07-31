@@ -46,7 +46,7 @@ def write_bg_file(oper_loc, bg_loc):
     
     for i in imgs:
         with open('bg.txt', 'a') as f:
-            f.write(i)
+            f.write('{}\n'.format(i))
     
     os.chdir(cwd)
 

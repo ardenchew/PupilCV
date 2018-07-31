@@ -1,0 +1,1 @@
+opencv_createsamples -bg 'bg.txt' -img 'C:\Users\arden\Dropbox (Personal)\github\pupilcv\images\iris\0.jpg'
