@@ -1,0 +1,1 @@
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 90 -numNeg 45 -numStages 5 -w 20 -h 20
