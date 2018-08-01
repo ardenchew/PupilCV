@@ -1,0 +1,1 @@
+opencv_createsamples -bg bg.txt -img 0.jpg -info info/info.lst -pngoutput info -maxxangle 0.5 maxyangle 0.5 -maxzangle 0.5 -num 100 -bgcolor 235 -bgthresh 25
